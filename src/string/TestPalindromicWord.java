@@ -27,11 +27,34 @@ public class TestPalindromicWord {
 
 	}
 
+	public String[] splitString(String s) {
+		for (int i = 0; i < s.length(); i++) {
+			switch (s.charAt(i)) {
+			case ',':
+			case '.':
+			case '-':
+			case '!':
+				s.replace(s.charAt(i), ' ');
+			}
+		}
+		String[] arr = s.split(" ");
+
+		return arr;
+	}
+
 	public static void main(String[] args) {
 		TestPalindromicWord obj = new TestPalindromicWord();
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter something: ");
 		String s = scanner.nextLine();
+		
+		// check word
 		obj.testPalind(s);
+
+		//check phrase
+		String[] strArray = obj.splitString(s);
+		for (int i = 0; i < strArray.length; i++) {
+			obj.testPalind(strArray[i]);
+		}
 	}
 }
