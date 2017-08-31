@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class CheckVowelsDigits {
 
-	public int checkVowels(String s) {
+	public int countVowels(String input) {
 		int vowelsCount = 0;
-		String lowercaseString = s.toLowerCase();
+		String lowercaseString = input.toLowerCase();
 
 		for (int i = 0; i < lowercaseString.length(); i++) {
 			char letter = lowercaseString.charAt(i);
@@ -23,10 +23,10 @@ public class CheckVowelsDigits {
 		return vowelsCount;
 	}
 
-	public int checkDigits(String s) {
+	public int countDigits(String input) {
 		int digitsCount = 0;
-		for (int i = 0; i < s.length(); i++) {
-			char letter = s.charAt(i);
+		for (int i = 0; i < input.length(); i++) {
+			char letter = input.charAt(i);
 			if (letter >= '0' && letter <= '9') {
 				digitsCount++;
 			}
@@ -42,13 +42,14 @@ public class CheckVowelsDigits {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		CheckVowelsDigits obj = new CheckVowelsDigits();
-		Scanner scanner = new Scanner(System.in);
+		Scanner scanner = new Scanner(System.in); 
 		System.out.println("Enter something: ");
 		String s = scanner.nextLine();
-		int vowelsCount = obj.checkVowels(s);
-		int digitsCount = obj.checkDigits(s);
-		System.out.println("Number of vowels: " + vowelsCount + " (" + obj.percentages(vowelsCount, s.length()) + "%)");
-		System.out.println("Number of digits: " + digitsCount + " (" + obj.percentages(digitsCount, s.length()) + "%)");
+		int vowelsCount = obj.countVowels(s);
+		int digitsCount = obj.countDigits(s);
+		System.out.printf("Number of vowels: %d (%.2f)", vowelsCount, obj.percentages(vowelsCount, s.length()));
+		System.out.printf("\nNumber of digits: %d (%-1.2f)", digitsCount, obj.percentages(digitsCount, s.length()));
+		scanner.close();
 	}
 
 }

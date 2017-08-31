@@ -3,7 +3,7 @@ package string;
 import java.util.Scanner;
 
 public class PhoneKeyPad {
-	public void checkKeyPad (String s) {
+	public void convertToDigits (String s) {
 		String lowercaseString = s.toLowerCase();
 		for (int i = 0; i < lowercaseString.length(); i++) {
 			char letter = lowercaseString.charAt(i);
@@ -56,10 +56,11 @@ public class PhoneKeyPad {
 	}
 	
 	public static void main(String[] args) {
-		PhoneKeyPad obj = new PhoneKeyPad();
+		PhoneKeyPad phoneKeyPad = new PhoneKeyPad();
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter something: ");
 		String s = scanner.nextLine();
-		obj.checkKeyPad(s);
+		phoneKeyPad.convertToDigits(s);
+		scanner.close();
 	}
 }
