@@ -3,23 +3,23 @@ package string;
 import java.util.Scanner;
 
 public class TestPalindromicPhrase {
-	
+
 	// Check isLetter to compare
-	public boolean isLetter (char c) {
+	public boolean isLetter(char c) {
 		if (c >= 'a' && c <= 'z') {
 			return true;
 		}
 		return false;
 	}
-	
-	//Test palindromic
+
+	// Test palindromic
 	public boolean testPalindPhrase(String input) {
 		String st = input.toLowerCase();
-		int fwIndex = 0, bwIndex = st.length() -1;
+		int fwIndex = 0, bwIndex = st.length() - 1;
 		char fwLetter = st.charAt(fwIndex);
 		char bwLetter = st.charAt(bwIndex);
 		while (fwIndex < bwIndex) {
-			if (!isLetter(fwLetter) || !isLetter(bwLetter) ||  fwLetter != bwLetter) {
+			if (!isLetter(fwLetter) || !isLetter(bwLetter) || fwLetter != bwLetter) {
 				return false;
 			} else {
 				fwIndex++;

@@ -42,7 +42,7 @@ public class CheckVowelsDigits {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		CheckVowelsDigits obj = new CheckVowelsDigits();
-		Scanner scanner = new Scanner(System.in); 
+		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter something: ");
 		String s = scanner.nextLine();
 		int vowelsCount = obj.countVowels(s);
