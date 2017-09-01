@@ -56,6 +56,7 @@ public class PrintNumberInWord {
 		} else {
 			System.out.println("Error! Valid number must be more than 0 and less than 10!");
 		}
+		scanner.close();
 
 	}
 

@@ -27,5 +27,6 @@ public class CheckPassFail {
 		int markInput = Integer.parseInt(scanner.nextLine());
 		obj.checkPassFail(markInput);
 		System.out.println("\nDONE");
+		scanner.close();
 	}
 }

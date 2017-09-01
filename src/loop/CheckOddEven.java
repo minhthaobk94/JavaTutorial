@@ -27,5 +27,6 @@ public class CheckOddEven {
 		int numberInput = Integer.parseInt(scanner.nextLine());
 		obj.checkOddEden(numberInput);
 		System.out.println("\nBYE!");
+		scanner.close();
 	}
 }
