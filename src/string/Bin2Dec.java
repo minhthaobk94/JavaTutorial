@@ -7,7 +7,7 @@ public class Bin2Dec {
 		int dec = 0;
 		for (int i = 0; i < input.length(); i++) {
 			if(input.charAt(i) == '1') {
-				dec += Math.pow(2, input.length() - i);
+				dec += Math.pow(2, input.length() - i - 1);
 			} else if (input.charAt(i) != '0'){
 				System.out.println("Error");
 				System.exit(0);;
