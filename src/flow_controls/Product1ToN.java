@@ -3,13 +3,13 @@ package flow_controls;
 import java.util.Scanner;
 
 public class Product1ToN {
-	
-	public void compute(int n) {
+
+	public long compute(int n) {
 		long product = 1;
 		for (int i = 1; i <= n; i++) {
 			product *= i;
 		}
-		System.out.printf("Product 1 to %d is %d", n, product);
+		return product;
 	}
 
 	public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Product1ToN {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter N: ");
 		int n = scanner.nextInt();
-		product1ToN.compute(n);
+		System.out.printf("Product 1 to %d is %d", n, product1ToN.compute(n));
 		scanner.close();
 	}
 
