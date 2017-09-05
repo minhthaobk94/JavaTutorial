@@ -1,10 +1,11 @@
 package flow_controls;
 
+import java.util.Scanner;
+
 public class Fibonacci {
 
-	public void fibo() {
+	public void fibo(int nMax) {
 		int n = 3;
-		int nMax = 20;
 		int fn;
 		int fnMinus1 = 1;
 		int fnMinus2 = 1;
@@ -26,7 +27,11 @@ public class Fibonacci {
 
 	public static void main(String[] args) {
 		Fibonacci fibonacci = new Fibonacci();
-		fibonacci.fibo();
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter number: ");
+		int nMax = scanner.nextInt();
+		fibonacci.fibo(nMax);
+		scanner.close();
 	}
 
 }
