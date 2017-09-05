@@ -1,24 +1,26 @@
-package flow_controls;
+package basic.flow_controls;
 
 import java.util.Scanner;
 
-public class SquareBoard {
+public class PrintPattern {
 
-	public void draw(int n) {
+	public void drawA(int n) {
 		for (int row = 0; row < n; row++) {
-			for (int col = 0; col < n; col++) {
-				System.out.print("# ");
+			for (int col = 0; col <= row; col++) {
+				System.out.printf("%2s", "#");
 			}
 			System.out.println();
 		}
 	}
+	
+	
 
 	public static void main(String[] args) {
-		SquareBoard squareBoard = new SquareBoard();
+		PrintPattern printPattern = new PrintPattern();
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("Enter number: ");
 		int n = scanner.nextInt();
-		squareBoard.draw(n);
+		printPattern.drawA(n);
 		scanner.close();
 	}
 

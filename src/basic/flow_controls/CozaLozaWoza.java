@@ -1,4 +1,4 @@
-package flow_controls;
+package basic.flow_controls;
 
 public class CozaLozaWoza {
 	boolean printed;
