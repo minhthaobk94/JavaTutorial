@@ -61,7 +61,7 @@ public class Hex2Bin {
 
 			default:
 				System.out.println("Not hexa");
-				break;
+				return "none";
 			}
 		}
 		return result;
