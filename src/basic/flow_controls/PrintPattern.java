@@ -22,15 +22,15 @@ public class PrintPattern {
 		}
 	}
 
-//	public void drawC(int n) {
-//		for(int row = 0; row < n; row++) {
-//			for (int col = row; col < n; col++) {
-//				System.out.printf("%2s", " ");
-//			}
-//			System.out.println();
-//		}
-//	}
-	
+	// public void drawC(int n) {
+	// for(int row = 0; row < n; row++) {
+	// for (int col = row; col < n; col++) {
+	// System.out.printf("%2s", " ");
+	// }
+	// System.out.println();
+	// }
+	// }
+
 	public void drawC(int n) {
 		for (int row = n - 1; row >= 0; row--) {
 			for (int col = n - 1; col > row; col--) {
