@@ -30,7 +30,7 @@ public class PrintPattern {
 //			System.out.println();
 //		}
 //	}
-	
+
 	public void drawC(int n) {
 		for (int row = n - 1; row >= 0; row--) {
 			for (int col = n - 1; col > row; col--) {
